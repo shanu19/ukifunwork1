@@ -1,0 +1,96 @@
+body {
+  background: #111;
+
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  width: 400px;
+  height: 400px;
+  background: #eee;
+  overflow: hidden;
+
+}
+
+.music {
+  position: relative;
+  z-index: 9999;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  width: fit-content;
+  margin: 0px auto;
+  padding-top: 50px;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+.inner {
+  position: absolute;
+  top: -80%;
+  left: -25%;
+  width: 600px;
+  height: 600px;
+  background: rgba(1, 1, 1, .4);
+  animation: waves 5s infinite linear;
+  border-radius: 46%;
+  transform-origin: 50% 48%;
+}
+
+.inner:nth-child(2) {
+  animation-duration: 7s;
+}
+
+.inner:nth-child(3) {
+  margin-top: 10px;
+  animation-duration: 9s;
+}
+
+@keyframes waves {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.play-btn {
+  cursor: pointer;
+  border-radius: 50%;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 12px 15px rgba(1, 1, 1, .4);
+  transition: all 1s ease;
+}
+
+.play-btn:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 5px rgba(1, 1, 1, .2);
+}
+
+
+
+.play-anim {
+  animation: waves-play 2s infinite linear;
+  border-radius: 46%;
+  transform-origin: 50% 48%;
+}
+
+@keyframes waves-play {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.box{
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
